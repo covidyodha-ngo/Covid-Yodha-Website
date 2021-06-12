@@ -11,6 +11,8 @@ fetch(parseUrl + RSS_URL)
     const item = data.items
     for( i=0 ; i < 5; i++){
       console.log(item[i].title);
+      console.log(item[i].thumbnail);
+      
     }
     // console.log(item[0].author);
 
