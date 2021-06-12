@@ -19,6 +19,10 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
@@ -39,6 +43,7 @@
 
     <!-- Template Main CSS File -->
     <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/podcast.css" rel="stylesheet" />
 </head>
 <body>
     <!-- ======= Header ======= -->
@@ -81,17 +86,77 @@
 
     </main> -->
     <!-- <div id="root"></div> -->
-    <rss>
-        <channel>
-          <title>Feed Title</title>
-          <item>
-             <link>https://codepen.io/billgil/pen/ewqWzY</link>
-             <title>A sad rain cloud</title>
-             <dc:creator>Bill Gilmore</dc:creator>
-          </item>
-          <!-- a bunch more items -->
-        </channel>
-      </rss>
+    <main id="main">
+      <div class="box">
+    <div class="player">
+      <p id="logo"><i class="fa fa-music"></i>Podcast</p>
+
+      <!--- left part --->
+      <div class="left">
+        <!--- song img --->
+        <img id="track_image" />
+        <div class="volume">
+          <p id="volume_show">100</p>
+          <i
+            class="fa fa-volume-up"
+            aria-hidden="true"
+            onclick="mute_sound()"
+            id="volume_icon"
+          ></i>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            onchange="volume_change()"
+            id="volume"
+          />
+        </div>
+      </div>
+
+      <!--- right part --->
+      <div class="right">
+        <div class="show_song_no">
+          <p id="present" style="margin-bottom: 0px !important;">1</p>
+          <p>/</p>
+          <p id="total" style="margin-bottom: 0px !important;">5</p>
+        </div>
+
+        <!--- song title & artist name --->
+        <p id="title">title.mp3</p>
+        <p id="artist">Artist name</p>
+
+        <!--- middle part --->
+        <div class="middle">
+          <button onclick="previous_song()" id="pre">
+            <i class="fa fa-step-backward" aria-hidden="true"></i>
+          </button>
+          <button onclick="justplay()" id="play">
+            <i class="fa fa-play" aria-hidden="true"></i>
+          </button>
+          <button onclick="next_song()" id="next">
+            <i class="fa fa-step-forward" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!--- song duration part --->
+        <div class="duration">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            id="duration_slider"
+            onchange="change_duration()"
+          />
+        </div>
+        <button id="auto" onclick="autoplay_switch()" >
+          Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    </div>
+  </main>
         <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
       <div class="footer-newsletter">
