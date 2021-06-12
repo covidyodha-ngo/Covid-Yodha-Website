@@ -3,17 +3,31 @@ const parseUrl = 'https://api.rss2json.com/v1/api.json?rss_url='
 const RSS_URL = `https://anchor.fm/s/5cf3cd00/podcast/rss`
 
 let all_songs = []
+
 fetch(parseUrl + RSS_URL)
   .then((response) => response.json())
   .then((data) => {
     console.log(data)
     const item = data.items
+    for( i=0 ; i < 5; i++){
+      console.log(item[i].title);
+    }
+    // console.log(item[0].author);
+
+    // console.log(item[0].thumbnail);
+
+    // console.log(item[0].title);
+
+    // console.log(item[0].enclosure.link);
     console.log(item.length)
     length = item.length
     // load_track(index_no)
-
+    
+    console.log(item.title)
     // return all_songs
   })
+
+console.log(test);
 
 let previous = document.querySelector('#pre')
 let play = document.querySelector('#play')
