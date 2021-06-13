@@ -34,7 +34,9 @@
     <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
+    <link href="./assets/css/popup.css" rel="stylesheet" />
     <link href="./assets/css/style.css" rel="stylesheet" />
+    
 </head>
 
 <body>
@@ -117,7 +119,7 @@
     <main id="main">
       <div class="container-model">
         <!-- Button trigger modal -->
-        <button type="button" class="back-to-top1 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#myModal">
+        <button type="button" onclick="togglePopup()" class="back-to-top1 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#myModal">
           <i class="fab fa-pinterest"></i>
         </button>
            
@@ -606,6 +608,16 @@
 
       <!-- End Contact Section -->
     </main>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup()">×</div>
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
+      </div>
+    </div>
+     
+    
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
@@ -775,13 +787,11 @@
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
-    <script type="text/javascript">
-      $(window).on('load', function () {
-        setTimeout(function () {
-          $("#myModal").modal('show');
-        }, 4500)
-      });
-    </script>
+    <script>
+      function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+  }
+  </script>
 
     <!-- Template Main JS File -->
     <script src="./assets/js/main.js"></script>
