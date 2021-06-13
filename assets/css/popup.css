@@ -11,13 +11,12 @@
    
   .popup .content {
     border-radius: 4%;
-
     position:fixed;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%) scale(0);
-    background:#fff;
-    /* width:95%; */
+    /* background:#fff; */
+    width:95% !important;
     max-width:500px;
     height:400px;
     z-index:2;
