@@ -665,6 +665,11 @@ section {
 }
 
 @media (max-width: 991px) {
+  .back-to-top1 {
+   
+    bottom: 10.2%;
+    
+  }
   .hero {
     height: auto;
     padding: 120px 0 60px 0;
