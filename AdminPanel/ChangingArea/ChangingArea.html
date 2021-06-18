@@ -2,85 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <title>Covid Yodha Admin Pannel</title>
+  <title>Covid Yodha Admin Pannel</title>
 
-    <!-- Custom fonts for this template-->
-    <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+  <!-- Custom fonts for this template-->
+  <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
 
-    <!-- Custom styles for this template-->
-    <link href="../../assets/css/AdminPanel/ChangingArea/ChangingArea.css" rel="stylesheet" />
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    
+  <!-- Custom styles for this template-->
+  <link href="../../assets/css/AdminPanel/ChangingArea/ChangingArea.css" rel="stylesheet" />
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
 
-    <!-- Initialize Firebase -->
-    <!-- <script src="/__/firebase/init.js"></script> -->
+
+  <!-- Initialize Firebase -->
+  <!-- <script src="/__/firebase/init.js"></script> -->
 </head>
 
 <body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <!-- <div class="sidebar-brand-icon">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <!-- <div class="sidebar-brand-icon">
                     <img src="../../assets/img/covidlogo.png" alt="" width="50%" />
                 </div> -->
-                <div class="sidebar-brand-text mx-3">Covid Yodha</div>
-            </a>
+        <div class="sidebar-brand-text mx-3">Covid Yodha</div>
+      </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0" />
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0" />
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="../AdminDashboard/admindashboard.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="../AdminDashboard/admindashboard.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider" />
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
 
-            <!-- Heading -->
-            <div class="sidebar-heading">Interface</div>
+      <!-- Heading -->
+      <div class="sidebar-heading">Interface</div>
 
-            <li class="nav-item">
-                <a class="nav-link" href="ChangingArea.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Content Changing Area</span></a>
-            </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ChangingArea.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Content Changing Area</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../ChangingArea/blogadder.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>blogs Changing Area</span></a>
+      </li>
 
-            <!-- <li class="nav-item">
+      <!-- <li class="nav-item">
           <a class="nav-link" href="../ChangingArea/blogadder.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Blog Content Add Data</span></a
           >
         </li> -->
 
-            <!-- Divider -->
-            <hr class="sidebar-divider" />
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" onclick="signOut()" id="sidebarToggle"></button>
-            </div>
-        </ul>
-        <!-- End of Sidebar -->
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" onclick="signOut()" id="sidebarToggle"></button>
+      </div>
+    </ul>
+    <!-- End of Sidebar -->
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-            <!-- Main Content -->
-            <div id="content">
-                <!-- Topbar -->
-                <nav class="
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="
               navbar navbar-expand navbar-light
               bg-white
               topbar
@@ -88,13 +95,13 @@
               static-top
               shadow
             ">
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-              <i class="fa fa-bars"></i>
-            </button>
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
 
-                    <!-- Topbar Search -->
-                    <form class="
+          <!-- Topbar Search -->
+          <form class="
                 d-none d-sm-inline-block
                 form-inline
                 mr-auto
@@ -103,45 +110,48 @@
                 mw-100
                 navbar-search
               ">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                  </button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2" />
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="
                     dropdown-menu dropdown-menu-right
                     p-3
                     shadow
                     animated--grow-in
                   " aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                      aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
 
-                        <!-- Nav Item - Alerts -->
-                        <!-- <li class="nav-item dropdown no-arrow mx-1">
+            <!-- Nav Item - Alerts -->
+            <!-- <li class="nav-item dropdown no-arrow mx-1">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -209,8 +219,8 @@
                 </div>
               </li> -->
 
-                        <!-- Nav Item - Messages -->
-                        <!-- <li class="nav-item dropdown no-arrow mx-1">
+            <!-- Nav Item - Messages -->
+            <!-- <li class="nav-item dropdown no-arrow mx-1">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -313,72 +323,60 @@
                 </div>
               </li> -->
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
+            <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a onclick="signOut()" class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span id="uemail" class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span
-                  >
-                  <!-- <img
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a onclick="signOut()" class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="uemail" class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                <!-- <img
                     class="img-profile rounded-circle"
                     src="../../assets/img/team/boardmember-4.png"
                   /> -->
-                </a>
-                <!-- Dropdown - User Information -->
-                <div
-                  class="
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="
                     dropdown-menu dropdown-menu-right
                     shadow
                     animated--grow-in
-                  "
-                  aria-labelledby="userDropdown"
-                >
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Settings
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Activity Log
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
-                  >
-                    <i
-                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                    ></i>
-                    Logout
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </nav>
-          <!-- End of Topbar -->
+                  " aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
 
-          <!-- Begin Page Content -->
-          <div class="container-fluid">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">Content Changing Area</h1>
-              <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Content Changing Area</h1>
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
-            </div>
+          </div>
 
-            <!-- Content Row -->
-            <div class="row">
-              <!-- Earnings (Monthly) Card Example -->
-              <!-- <div class="col-xl-3 col-md-6 mb-4">
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -394,125 +392,82 @@
                                 </div>
                             </div>
                         </div> -->
-            </div>
+          </div>
 
-            <!-- Content Row -->
+          <!-- Content Row -->
 
-            <div class="row">
-              <!-- Area Chart -->
-              <div class="col-xl-12 col-lg-5">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div
-                    class="
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="
                       card-header
                       py-3
                       d-flex
                       flex-row
                       align-items-center
                       justify-content-between
-                    "
-                  >
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      News Page Changing Area
-                    </h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                        ></i>
-                      </a>
-                      <div
-                        class="
+                    ">
+                  <h6 class="m-0 font-weight-bold text-primary">
+                    News Page Changing Area
+                  </h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="
                           dropdown-menu dropdown-menu-right
                           shadow
                           animated--fade-in
-                        "
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-area">
-                      <!-- <canvas id="myAreaChart">Hello</canvas> -->
-                      <form id="myform">
-                        <div class="newsCollector">
-                          <div class="newsDetails1">
-                            <input
-                              type="imageholder"
-                              class="input-box"
-                              placeholder="Enter Image Url"
-                              id="imageholder"
-                              required
-                            />
-                            <input
-                              type="headingnews"
-                              class="input-box"
-                              placeholder="Enter Heading"
-                              id="headingnews"
-                              required
-                            />
-                          </div>
-                          <div class="newsDetails2">
-                            <input
-                              type="text"
-                              class="input-box"
-                              placeholder="Enter Content"
-                              id="contentNews"
-                              required
-                            />
-                            <input
-                              type="descriptionNews"
-                              class="input-box"
-                              placeholder="Enter Site Link to Read the full news"
-                              id="descriptionNews"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div class="buttonflex">
-                        <button 
-                          
-                          id="button"
-                          type="button"
-                          class="btn btn-success btn-form buttonsize"
-                          onclick="data()"
-                        >
-                          Submit
-                        </button>
-                        <button onclick="clea()" type="button"class="btn btn-success btn-form buttonsize" >
-                          clear
-                        </button>
-                        
-                        <button type="button"class="btn btn-success btn-form buttonsize" >
-                          <a href="../../News.html" target="_blank">check changes</a>
-                        </button>
-                      </div>
-                      </form>
+                        " aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                   </div>
                 </div>
-              </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <!-- <canvas id="myAreaChart">Hello</canvas> -->
+                    <form id="myform">
+                      <div class="newsCollector">
+                        <div class="newsDetails1">
+                          <input type="imageholder" class="input-box" placeholder="Enter Image Url" id="imageholder"
+                            required />
+                          <input type="headingnews" class="input-box" placeholder="Enter Heading" id="headingnews"
+                            required />
+                        </div>
+                        <div class="newsDetails2">
+                          <input type="text" class="input-box" placeholder="Enter Content" id="contentNews" required />
+                          <input type="descriptionNews" class="input-box"
+                            placeholder="Enter Site Link to Read the full news" id="descriptionNews" required />
+                        </div>
+                      </div>
+                      <div class="buttonflex">
+                        <button id="button" type="button" class="btn btn-success btn-form buttonsize" onclick="data()">
+                          Submit
+                        </button>
+                        <button onclick="clea()" type="button" class="btn btn-success btn-form buttonsize">
+                          clear
+                        </button>
 
-              <!-- Pie Chart -->
-              <!-- <div class="col-xl-4 col-lg-5">
+                        <button type="button" class="btn btn-success btn-form buttonsize">
+                          <a href="../../News.html" target="_blank">check changes</a>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <!-- <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
                                 Card Header - Dropdown
                                 <div
@@ -552,14 +507,14 @@
         </div>
     </div>
     </div> -->
-    </div>
+          </div>
 
-    <!-- Content Row -->
-    <div class="row">
-        <!-- Content Column -->
-        <div class="col-lg-6 mb-4">
-            <!-- Project Card Example -->
-            <!-- <div class="card shadow mb-4">
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+              <!-- Project Card Example -->
+              <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                                 </div>
@@ -597,8 +552,8 @@
                                 </div>
                             </div> -->
 
-            <!-- Color System -->
-            <!-- <div class="row">
+              <!-- Color System -->
+              <!-- <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-primary text-white shadow">
                                         <div class="card-body">
@@ -664,11 +619,11 @@
                                     </div>
                                 </div>
                             </div> -->
-        </div>
+            </div>
 
-        <div class="col-lg-6 mb-4">
-            <!-- Illustrations -->
-            <!-- <div class="card shadow mb-4">
+            <div class="col-lg-6 mb-4">
+              <!-- Illustrations -->
+              <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
                                 </div>
@@ -686,8 +641,8 @@
                                 </div>
                             </div> -->
 
-            <!-- Approach -->
-            <!-- <div class="card shadow mb-4">
+              <!-- Approach -->
+              <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                                 </div>
@@ -699,76 +654,78 @@
                                         Bootstrap framework, especially the utility classes.</p>
                                 </div>
                             </div> -->
-        </div>
-    </div>
-    </div>
-    <!-- /.container-fluid -->
-    </div>
-    <!-- End of Main Content -->
-
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Covid Yodha </span>
             </div>
+          </div>
         </div>
-    </footer>
-    <!-- End of Footer -->
+        <!-- /.container-fluid -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Covid Yodha </span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
     </div>
     <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Page Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-                </div>
-                <div class="modal-body">
-                    Select "Logout" below if you are ready to end your current session.
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
-              Cancel
-            </button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
+        <div class="modal-body">
+          Select "Logout" below if you are ready to end your current session.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">
+            Cancel
+          </button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
     </div>
-    
-    <!-- Bootstrap core JavaScript-->
-    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="../../assets/js/Admin/utils/dash.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="../../assets/vendor/chart.js/Chart.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="../../assets/js/Admin/utils/dash.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-    
+  <!-- Page level plugins -->
+  <script src="../../assets/vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
 </body>
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
-    <script src="../../assets/js/Admin/login.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+<script src="../../assets/js/Admin/login.js"></script>
+
 </html>

@@ -342,16 +342,122 @@ getdata()
 
 
 
+function uploadblog() {
+    const ref = firebase.storage().ref();
+    const file = document.getElementById("files").files[0];
+    const name = +new Date() + "-" + file.name;
+    const metadata = {
+        contentType: file.type
+    };
+    const task = ref.child(name).put(file, metadata);
+    task
+        .then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+            console.log(url);
+            blogcontent(url)
+
+        })
+        .catch(console.error);
+    window.alert("blogs saved")
+}
 
 
 
 
+function blogcontent(url) {
+    var headingBlog = document.getElementById('headingBlog').value;
+    var shortDesp = document.getElementById('shortDesp').value;
+    var blogLink = document.getElementById('blogLink').value;
 
 
 
 
+    // Alphanumeric characters
+    const chars = '0123456789';
+    let autoId = '';
+    for (let i = 0; i < 100; i++) {
+        autoId += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
 
 
+
+    console.log(autoId)
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = dd + '-' + mm + '-' + yyyy;
+    firebase.firestore().collection('blogs').doc(autoId).set({
+        date: today,
+        image: url,
+        headingBlog: headingBlog,
+        shortDesp: shortDesp,
+        blogLink: blogLink
+    })
+    console.log(headingBlog)
+
+
+}
+var size = 0;
+
+// function addcard() {
+//     database.collection('blogs').get().then((snapshot) => {
+//         console.log(snapshot.docs)
+//         for (var i = 0; i < snapshot.docs.length; i++) {
+
+
+
+//             console.log(i)
+//         }
+//     });
+// }
+
+
+
+
+// document.getElementById('maindiv').innerHTML += "<div class='col-md-4 d-flex align-items-stretch' data-aos='fade-up' data-aos-delay='100'><div class='flip-card'><div class='flip-card-inner'><div class='flip-card-front'><img src='assets/img/blog/blog-4.png' class='img-fluid' alt=''></div><div class='flip-card-back'><h4>importance of sustainable food system during covid-19</h4><p>In light of the COVID 19 pandemic, food systems are at the crossroads of human well-being, economicdevelopment, and environmental state. Empty shelves in supermarkets of cities can be frightening.</p><div><a style='color: white; margin-top: 5%;' href='https://covidyodha.medium.com/importance-of-sustainable-food-systems-during-covid-19-2d7687c22eda' class='btn-read-more d-inline-flex align-items-center justify-content-center align-self-center'><span style='color: white;'>Read More</span><i class='bi bi-arrow-right'></i></a></div></div></div></div></div>"
+
+
+// addcard()
+
+
+
+// database.collection('blogs').get().
+//     then(snapshot => {
+//         console.log(snapshot.docs[0])
+// console.log(doc.data().image)
+// console.log(image.src);
+
+// var imgblog = doc.data().image;
+// var headblog = doc.data().headingBlog;
+// var shortDesp = doc.data().shortDesp;
+// var bloglink = doc.data().blogLink;
+// document.getElementById('blogimage' + 0).src = imgblog;
+// document.getElementById('blogheading' + 0).src = headblog;
+// document.getElementById('blogpara' + 0).src = shortDesp;
+// document.getElementById('bloglink' + 0).src = bloglink;
+
+// });
+
+
+
+var docref = database.collection('blogs').get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        document.getElementById('maindiv').innerHTML += "<div class='col-md-4 d-flex align-items-stretch' data-aos='fade-up' data-aos-delay='100'><div class='flip-card'><div class='flip-card-inner'><div class='flip-card-front'><img id='blogimage" + doc.id + "' src=" + doc.data().image + " class='img-fluid' alt=''></div><div class='flip-card-back'><h4 id='blogheading" + doc.id + "'>" + doc.data().headingBlog + "</h4><p id='blogpara" + doc.id + "'>" + doc.data().shortDesp + "</p><div><a style='color: white; margin-top: 5%;' href=" + doc.data().blogLink + " id='bloglink" + doc.id + "' class='btn-read-more d-inline-flex align-items-center justify-content-center align-self-center'><span style='color: white;'>Read More</span><i class='bi bi-arrow-right'></i></a></div></div></div></div></div>"
+
+
+        console.log(doc.id, '=>', doc.data())
+        // var imgblog = doc.data().image;
+        var headblog = doc.data().headingBlog;
+        var shortDesp = doc.data().shortDesp;
+        var bloglink = doc.data().blogLink;
+        // document.getElementById('blogimage' + doc.id).src = imgblog;
+        document.getElementById('blogheading' + doc.id).src = headblog;
+        document.getElementById('blogpara' + doc.id).src = shortDesp;
+        document.getElementById('bloglink' + doc.id).src = bloglink;
+    })
+})
 
 
 
