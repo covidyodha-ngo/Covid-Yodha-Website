@@ -196,3 +196,20 @@ input[type='range']::-webkit-slider-thumb {
 .right .show_song_no p:nth-child(2) {
   margin: 0 5px;
 }
+@media(max-width:1280px){
+  .player {
+    margin-top: 50px;
+    
+  }
+}
+@media(min-width:1024x){
+  .right #title { 
+    right: 60%;
+  }
+  .left img {
+    height: 50%;
+    width: 60% !important;
+    border-radius: 15px;
+    box-shadow: 1px 0px 20px 12px rgb(240 240 240 / 20%);
+  }
+}
