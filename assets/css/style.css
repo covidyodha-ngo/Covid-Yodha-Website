@@ -499,6 +499,11 @@ section {
     display: none;
   }
 }
+@media (max-width: 360px){
+  .back-to-top1{
+    bottom:9.2% !important;
+  }
+}
 
 .navbar-mobile {
   position: fixed;
