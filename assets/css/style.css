@@ -1456,6 +1456,7 @@ section {
 }
 
 @media screen and (max-width: 1280px) {
+  .back-to-top1{margin-bottom: 10.2px;}
   .container-model {
     position: relative;
     margin-left: 95%;
